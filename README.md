@@ -22,21 +22,37 @@ mysql -uusername -ppassword <alarm-verification-db-schema.sql
 配置文件：
 
 {
+
     "debug": true,
+    
     "http": {
+    
         "listen": "0.0.0.0:4000",
+        
         "token": ""
+        
     },
+    
     "database": "root:@tcp(127.0.0.1:3306)/falcon_portal?loc=Local&parseTime=true", //新增配置，连接falcon db
+    
     "maxIdle": 100, //新增配置，db使用，默认即可，抄袭于open-falcon hbs组件的配置参数
+    
     "cronStep": 3600,  //新增配置，定时获取最新告警策略、复制告警策略、告警策略配置错误验证  
+    
     "failTimeStd": 86400, //新增配置，用于判断告警策略配置错误的时间周期认定
+    
     "smtp": {
+    
         "addr": "mail.example.com:25",
+        
         "username": "falcon@example.com",
+        
         "password": "123456",
+        
         "from": "falcon@example.com"
+        
     }
+    
 }
 
 启动：
