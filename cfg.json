@@ -1,0 +1,17 @@
+{
+    "debug": true,
+    "http": {
+        "listen": "0.0.0.0:4000",
+        "token": ""
+    },
+    "database": "root:@tcp(127.0.0.1:3306)/falcon_portal?loc=Local&parseTime=true",
+    "maxIdle": 100,
+    "cronStep": 3600,
+    "failTimeStd": 86400,
+    "smtp": {
+        "addr": "mail.example.com:25",
+        "username": "falcon@example.com",
+        "password": "123456",
+        "from": "falcon@example.com"
+    }
+}
