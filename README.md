@@ -1,17 +1,26 @@
 mail-provider
 ==========================================================
+
 声明：本程序是基于https://github.com/open-falcon/mail-provider修改，本人未因此产生任何收益。
+
+
 友情提示：
+
 如果使用自建邮箱，比如最简单的sendmail，新版的go环境 smtp会验证不通过，导致告警发不出，因此在编译的时候，推荐老版本的go环境，本人使用go1.9.5测试有效，另外已提供了一个编译好的二进制文件。
 
 编译方法：
+
 go get ./...
+
+
 ./contorl build
 
 数据库表结构导入：
+
 mysql -uusername -ppassword <alarm-verification-db-schema.sql
 
 配置文件：
+
 {
     "debug": true,
     "http": {
@@ -31,6 +40,7 @@ mysql -uusername -ppassword <alarm-verification-db-schema.sql
 }
 
 启动：
+
 ./control start
 
 
